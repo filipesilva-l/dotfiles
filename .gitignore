@@ -1,0 +1,6 @@
+# Saída de nix build / home-manager build
+result
+result-*
+
+# Estado local do direnv
+.direnv/
