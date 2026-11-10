@@ -85,7 +85,12 @@
   };
 
   # Temas copiados como arquivos (formato nativo do ghostty)
-  xdg.configFile."ghostty/themes".source = ./ghostty-themes;
+  # recursive = true: links por arquivo, para `themes/` continuar gravável
+  # (o matugen/DMS grava themes/dankcolors).
+  xdg.configFile."ghostty/themes" = {
+    source = ./ghostty-themes;
+    recursive = true;
+  };
 
   programs.tmux = {
     enable = true;
